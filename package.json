@@ -1,0 +1,45 @@
+{
+  "name": "afontsize",
+  "version": "1.0.0",
+  "description": "Fit your text inside a container using the largest possible font size.",
+  "main": "afontsize.js",
+  "module": "afontsize.es.js",
+  "jsnext:main": "afontsize.es.js",
+  "scripts": {
+    "clean": "rimraf es lib dist 2> /dev/null",
+    "build:dist": "cross-env BUILD_TYPE=dist rollup -f umd -c ./rollup.config.js",
+    "build:lib": "cross-env BUILD_TYPE=lib rollup -f cjs -c ./rollup.config.js",
+    "build:es": "cross-env BUILD_TYPE=es rollup -f es -c ./rollup.config.js",
+    "build": "npm run build:dist && npm run build:lib && npm run build:es",
+    "prepare": "npm run clean && npm run build",
+  },
+  "author": "Iskren Slavov <iskren.s@gmail.com>",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zewish/afontsize.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zewish/afontsize/issues"
+  },
+  "homepage": "https://github.com/zewish/afontsize",
+  "keywords": [
+    "afontsize",
+    "auto",
+    "fontsize",
+    "autofont",
+    "automatic",
+    "resizing",
+    "browser",
+    "dom"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "cross-env": "^5.2.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.65.1",
+    "rollup-plugin-babel": "^4.0.3"
+  },
+  "dependencies": {}
+}
