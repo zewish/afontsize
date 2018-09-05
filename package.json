@@ -1,6 +1,6 @@
 {
   "name": "afontsize",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fit your text inside a container using the largest possible font size.",
   "main": "afontsize.js",
   "module": "afontsize.es.js",
@@ -23,6 +23,12 @@
     "url": "https://github.com/zewish/afontsize/issues"
   },
   "homepage": "https://github.com/zewish/afontsize",
+  "files": [
+    "dist",
+    "es",
+    "lib",
+    "src"
+  ],
   "keywords": [
     "afontsize",
     "auto",
