@@ -1,10 +1,10 @@
 {
   "name": "afontsize",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Fit your text inside a container using the largest possible font size.",
-  "main": "afontsize.js",
-  "module": "afontsize.es.js",
-  "jsnext:main": "afontsize.es.js",
+  "main": "lib/afontsize.js",
+  "module": "es/afontsize.js",
+  "jsnext:main": "es/afontsize.js",
   "scripts": {
     "clean": "rimraf es lib dist 2> /dev/null",
     "build:dist": "cross-env BUILD_TYPE=dist rollup -f umd -c ./rollup.config.js",
