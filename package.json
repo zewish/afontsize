@@ -11,7 +11,7 @@
     "build:lib": "cross-env BUILD_TYPE=lib rollup -f cjs -c ./rollup.config.js",
     "build:es": "cross-env BUILD_TYPE=es rollup -f es -c ./rollup.config.js",
     "build": "npm run build:dist && npm run build:lib && npm run build:es",
-    "prepare": "npm run clean && npm run build",
+    "prepare": "npm run clean && npm run build"
   },
   "author": "Iskren Slavov <iskren.s@gmail.com>",
   "license": "BSD-2-Clause",
