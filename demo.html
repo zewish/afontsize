@@ -2,11 +2,17 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Yay!</title>
+    <title>AFontSize Demo</title>
 
     <style media="screen">
-        * {
-            color: #0;
+        body {
+            background: #fff;
+            color: #000;
+            font-family: sans-serif;
+        }
+
+        div {
+            margin-bottom: 10px;
         }
 
         #fit1 {
@@ -16,20 +22,62 @@
 
         #fit2 {
             background: pink;
-            width: 30px;
+            max-width: 500px;
+            white-space: nowrap;
             overflow: hidden;
+        }
+
+        #fit3 {
+            background: skyblue;
+            white-space: nowrap;
+            display: inline-block;
+            max-width: 50%;
         }
     </style>
 
     <script type="text/javascript" src="https://unpkg.com/afontsize/dist/afontsize.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var fit1 = document.getElementById('fit1');
+            var fit2 = document.getElementById('fit2');
+            var fit3 = document.getElementById('fit3');
+
+            function fitThemAll() {
+                AFontSize(fit1);
+                AFontSize(fit2);
+
+                AFontSize(
+                    fit3,
+                    { max: 50 }
+                );
+            }
+
+            fitThemAll();
+
+            window.addEventListener('resize', fitThemAll, false);
+            fit1.addEventListener('input', fitThemAll, false);
+            fit2.addEventListener('input', fitThemAll, false);
+            fit3.addEventListener('input', fitThemAll, false);
+        }, false);
+    </script>
 </head>
 <body>
-    <div id="fit1">
-        I shall always fit!!! This is a super duper long text
+    <p>Demo:</p>
+    <ul>
+        <li>Resize the page</li>
+        <li>Text should be editable if your browser supports "contenteditable" attribute</li>
+    </ul>
+
+    <div id="fit1" contenteditable="true">
+        I shall always fit!!! This is a super super super long text. Yeah!
     </div>
 
-    <div id="fit2">
-        I'm constrained to 30px
+    <div id="fit2" contenteditable="true">
+        I'm constrained to a 500px container
+    </div>
+
+    <div id="fit3" contenteditable="true">
+        My max font size is 50px, max-width is 50%
     </div>
 </body>
 </html>

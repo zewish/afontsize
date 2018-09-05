@@ -6,8 +6,7 @@ module.exports = {
     output: {
         file: `${__dirname}/${BUILD_TYPE}/afontsize.js`,
         name: 'AFontSize',
-        sourcemap: true,
-        exports: 'named'
+        sourcemap: true
     },
     plugins: [ babel() ]
 };
