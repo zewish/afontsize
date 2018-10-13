@@ -1,6 +1,6 @@
 {
   "name": "afontsize",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Fit your text inside a container using the largest possible font size.",
   "main": "lib/afontsize.js",
   "module": "es/afontsize.js",

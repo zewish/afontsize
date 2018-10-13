@@ -5,5 +5,5 @@ Fit your text inside a container using the largest possible font size.
 Installation
 ------------
 ```bash
-$ npm install --save redux-remember
+$ npm install --save afontsize
 ```
